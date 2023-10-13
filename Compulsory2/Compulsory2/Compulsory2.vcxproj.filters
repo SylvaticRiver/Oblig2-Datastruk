@@ -18,7 +18,7 @@
     <ClInclude Include="Compulsory2SortingAlgorithms.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="QuickSort.h">
+    <ClInclude Include="InsertionSort.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MergeSort.h">
@@ -32,7 +32,7 @@
     <ClCompile Include="Compulsory2SortingAlgorithms.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="QuickSort.cpp">
+    <ClCompile Include="InsertionSort.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MergeSort.cpp">

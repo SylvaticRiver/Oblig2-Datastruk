@@ -7,9 +7,9 @@ using namespace std;
  {
      //the base case so it doesn't infinitely work itself to exhaustion
      //returns if the array size is 1
-     if (size == 1)
+     if (size == 1) {
          return;
-
+     }
      int iterations = 0;
      for (int i = 0; i < size - 1; i++)
          if (array[i] > array[i + 1]) {
@@ -18,8 +18,8 @@ using namespace std;
              iterations++;
          }
      //returns if the amount of iterations is 0 which means the array is completely sorted
-     if (iterations == 0)
+     if (iterations == 0) {
          return;
-
+         }
      bubbleSort(array, size - 1);
  }

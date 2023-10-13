@@ -1,7 +1,7 @@
 #include "Compulsory2SortingAlgorithms.h"
 #include <IOstream>
 #include <chrono>
-#include "QuickSort.h"
+#include "InsertionSort.h"
 #include "MergeSort.h"
 #include "BubbleSort.h"
 using namespace std::chrono;
@@ -9,9 +9,9 @@ using namespace std;
 
 bool active = true;
 
-QuickSort Qsort;
-MergeSort mSort;
-BubbleSort bSort;
+InsertionSort Isort;
+MergeSort MSort;
+BubbleSort BSort;
 
 void displayArray(int i[], int size) {
 	for (int j = 0; j < size; j++) {
@@ -24,13 +24,13 @@ void perform(int i[], int type, int mid, int size) {
 	auto start = high_resolution_clock::now();
 	switch (type) {
 	case 1:
-		Qsort.insertionSort(i, size);
+		Isort.insertionSort(i, size);
 		break;
 	case 2:
-		mSort.mergeSort(i, 0, size - 1);
+		MSort.mergeSort(i, 0, size - 1);
 		break;
 	case 3:
-		bSort.bubbleSort(i, size);
+		BSort.bubbleSort(i, size);
 		break;
 	default:
 		active = false;
@@ -76,7 +76,7 @@ int main() {
 
 		cout << "" << endl;
 		int type;
-		cout << "1 for QuickSort, 2 for MergeSort, 3 for BubbleSort" << endl;
+		cout << "1 for InsertionSort, 2 for MergeSort, 3 for BubbleSort" << endl;
 		cin >> type;
 		perform(array, type, mid, size);
 	}
